@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Юлия Залозная](https://up.htmlacademy.ru/javascript/16/user/674143).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Залозная].
 
 ---
 
