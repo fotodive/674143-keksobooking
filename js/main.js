@@ -14,7 +14,6 @@ var ESC_KEYCODE = 27;
 var setup = document.querySelector('.map');
 var setupOpen = document.querySelector('.map__pin--main');
 var listElement = document.querySelector('.map__pins');
-var buttonClose = document.querySelector('.popup__close');
 var userAddress = document.querySelector('#address');
 var titleInput = document.querySelector('#title');
 var priceInput = document.querySelector('#price');
@@ -139,7 +138,7 @@ var documentFragment = function () {
 var addDisabledNotice = function (inactive) {
   var noticeElements = document.querySelectorAll('.notice fieldset');
   for (var i = 0; i < noticeElements.length; i++) {
-    inactive ? noticeElements[i].setAttribute('disabled', 'disabled') : noticeElements[i].removeAttribute('disabled', 'disabled');
+    (inactive) ? noticeElements[i].setAttribute('disabled', 'disabled') : noticeElements[i].removeAttribute('disabled', 'disabled');
   }
 };
 addDisabledNotice(true);
@@ -160,11 +159,10 @@ var closeCard = function (e) {
 var openCard = function (element, i) {
   element.addEventListener('click', function () {
     var cards = document.querySelectorAll('.map__card');
-    (cards[i].getAttribute("class") === "map__card popup") ? cards[i].classList.add("hidden") : cards[i].classList.remove("hidden");
+    (cards[i].getAttribute('class') === 'map__card popup') ? cards[i].classList.add('hidden') : cards[i].classList.remove('hidden');
     cards[i].querySelector('.popup__close').addEventListener('click', closeCard);
     document.addEventListener('keydown', pressEcsPopup);
-  })
-  document.addEventListener('keydown', pressEcsPopup);
+  });
 };
 
 var setAttributes = function (elem, attrs) {
@@ -210,7 +208,7 @@ timeoutSelect.addEventListener('change', function () {
 
 var sendMessage = function (valid, message) {
   (valid) ? capacitySelect.setCustomValidity('') : capacitySelect.setCustomValidity(message);
-}
+};
 
 var settingCapacity = function () {
   var isValid = capacitySelect.validity.valid;
@@ -231,7 +229,7 @@ var settingCapacity = function () {
     sendMessage(isValid, 'Сто комнат не для гостей');
   }
   return false;
-}
+};
 
 roomsSelect.addEventListener('change', settingCapacity);
 capacitySelect.addEventListener('change', settingCapacity);
