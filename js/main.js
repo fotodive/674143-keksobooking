@@ -140,9 +140,9 @@ var addDisabledNotice = function (inactive) {
   for (var i = 0; i < noticeElements.length; i++) {
     if (inactive) {
       noticeElements[i].setAttribute('disabled', 'disabled');
-     } else {
+    } else {
       noticeElements[i].removeAttribute('disabled', 'disabled');
-     }
+    }
   }
 };
 addDisabledNotice(true);
@@ -165,9 +165,9 @@ var openCard = function (element, i) {
     var cards = document.querySelectorAll('.map__card');
     if (cards[i].getAttribute('class') === 'map__card popup') {
       cards[i].classList.add('hidden');
-     } else {
+    } else {
       cards[i].classList.remove('hidden');
-     }
+    }
     cards[i].querySelector('.popup__close').addEventListener('click', closeCard);
     document.addEventListener('keydown', pressEcsPopup);
   });
@@ -217,9 +217,9 @@ timeoutSelect.addEventListener('change', function () {
 var sendMessage = function (valid, message) {
   if (valid) {
     capacitySelect.setCustomValidity('');
-   } else {
-     capacitySelect.setCustomValidity(message);
-   }
+  } else {
+    capacitySelect.setCustomValidity(message);
+  }
 };
 
 var settingCapacity = function () {
