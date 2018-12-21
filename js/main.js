@@ -138,7 +138,11 @@ var documentFragment = function () {
 var addDisabledNotice = function (inactive) {
   var noticeElements = document.querySelectorAll('.notice fieldset');
   for (var i = 0; i < noticeElements.length; i++) {
-    (inactive) ? noticeElements[i].setAttribute('disabled', 'disabled') : noticeElements[i].removeAttribute('disabled', 'disabled');
+    if (inactive) {
+      noticeElements[i].setAttribute('disabled', 'disabled');
+     } else {
+      noticeElements[i].removeAttribute('disabled', 'disabled');
+     }
   }
 };
 addDisabledNotice(true);
@@ -159,7 +163,11 @@ var closeCard = function (e) {
 var openCard = function (element, i) {
   element.addEventListener('click', function () {
     var cards = document.querySelectorAll('.map__card');
-    (cards[i].getAttribute('class') === 'map__card popup') ? cards[i].classList.add('hidden') : cards[i].classList.remove('hidden');
+    if (cards[i].getAttribute('class') === 'map__card popup') {
+      cards[i].classList.add('hidden');
+     } else {
+      cards[i].classList.remove('hidden');
+     }
     cards[i].querySelector('.popup__close').addEventListener('click', closeCard);
     document.addEventListener('keydown', pressEcsPopup);
   });
@@ -207,7 +215,11 @@ timeoutSelect.addEventListener('change', function () {
 });
 
 var sendMessage = function (valid, message) {
-  (valid) ? capacitySelect.setCustomValidity('') : capacitySelect.setCustomValidity(message);
+  if (valid) {
+    capacitySelect.setCustomValidity('');
+   } else {
+     capacitySelect.setCustomValidity(message);
+   }
 };
 
 var settingCapacity = function () {
