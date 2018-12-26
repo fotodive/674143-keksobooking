@@ -1,6 +1,6 @@
 'use strict';
 
-( function () {
+(function () {
 
   var translateType = function (type) {
     switch (type) {
@@ -59,4 +59,3 @@
   };
 
 }) ();
-

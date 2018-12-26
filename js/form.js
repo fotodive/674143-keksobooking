@@ -98,9 +98,9 @@
   });
 
   window.form = {
-    addDisabledNotice : addDisabledNotice,
-    activateForm : activateForm,
-    removeDisabledNotice : removeDisabledNotice
+    addDisabledNotice: addDisabledNotice,
+    activateForm: activateForm,
+    removeDisabledNotice: removeDisabledNotice
   };
 
 }) ();
