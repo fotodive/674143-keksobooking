@@ -13,4 +13,4 @@
   };
 
   window.pin.renderPins = renderPins;
-}) ();
+})();

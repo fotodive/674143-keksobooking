@@ -103,4 +103,4 @@
     removeDisabledNotice: removeDisabledNotice
   };
 
-}) ();
+})();

@@ -98,4 +98,4 @@
     pressEcsPopup: pressEcsPopup,
     activateMap: activateMap
   };
-}) ();
+})();
