@@ -32,7 +32,6 @@
     document.addEventListener('keydown', pressEcsErrorPopup);
   };
 
-
   var showErrorMessage = function (error) {
     var errorTemplate = document.querySelector('#error').content.querySelector('.error');
     var errorBlock = errorTemplate.cloneNode(true);
@@ -63,11 +62,10 @@
     document.addEventListener('keydown', pressEcsErrorPopup);
   };
 
-
   window.error = {
-    showSuccessMessage : showSuccessMessage,
-    showErrorMessage : showErrorMessage,
-    ESC_KEYCODE : ESC_KEYCODE
+    showSuccessMessage: showSuccessMessage,
+    showErrorMessage: showErrorMessage,
+    ESC_KEYCODE: ESC_KEYCODE
   };
 
 }) ();

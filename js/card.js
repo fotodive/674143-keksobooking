@@ -1,6 +1,6 @@
 'use strict';
 
-( function () {
+(function () {
 
   var translateType = function (type) {
     switch (type) {
@@ -55,8 +55,7 @@
   };
 
   window.card = {
-    renderOffer : renderOffer
+    renderOffer: renderOffer
   };
 
 }) ();
-
