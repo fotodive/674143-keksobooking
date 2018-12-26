@@ -9,11 +9,10 @@
 
   var pressEcsPopup = function (evt) {
     if (evt.keyCode === window.error.ESC_KEYCODE) {
-     // var popups = document.querySelectorAll('.popup');
-      //for (var y = 0; y < popups.length; y++) {
-      //  popups[y]
-        evt.target.classList.add('hidden');
-     // }
+      var popups = document.querySelectorAll('.popup');
+      for (var y = 0; y < popups.length; y++) {
+        popups[y].classList.add('hidden');
+      }
     }
   };
 
@@ -24,7 +23,6 @@
   var openCard = function (element, i) {
     element.addEventListener('click', function () {
       var cards = document.querySelectorAll('.map__card');
-      console.log(cards[i]);
       if (cards[i].getAttribute('class') === 'map__card popup') {
         cards[i].classList.add('hidden');
       } else {
@@ -52,7 +50,7 @@
     setupOpen.removeEventListener('mousedown', onMouseDown);
     var mapPins = document.querySelectorAll('.map__pin:not(.map__pin--main)');
     mapPins.forEach(openCard);
-    window.form.addDisabledNotice(false);
+    window.form.removeDisabledNotice();
     window.form.activateForm();
   };
 
