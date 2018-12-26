@@ -95,6 +95,7 @@
   setupOpen.addEventListener('mousedown', onMouseDown);
 
   window.map = {
-    pressEcsPopup: pressEcsPopup
+    pressEcsPopup: pressEcsPopup,
+    activateMap: activateMap
   };
 }) ();

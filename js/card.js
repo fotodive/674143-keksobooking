@@ -55,7 +55,7 @@
   };
 
   window.card = {
-    renderOffer : renderOffer
+    renderOffer: renderOffer
   };
 
 }) ();
