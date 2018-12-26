@@ -43,7 +43,7 @@
       if (errorBlock) {
         main.removeChild(errorBlock);
       }
-      window.map.activateMap;
+      window.map.activateMap();
       document.removeEventListener('click', clickErrorPopup);
       document.removeEventListener('keydown', pressEcsErrorPopup);
     };
@@ -68,4 +68,4 @@
     ESC_KEYCODE: ESC_KEYCODE
   };
 
-}) ();
+})();

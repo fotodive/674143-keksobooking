@@ -58,4 +58,4 @@
     renderOffer: renderOffer
   };
 
-}) ();
+})();
