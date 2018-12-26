@@ -11,19 +11,20 @@
   var timeoutSelect = document.querySelector('#timeout');
   var roomsSelect = document.querySelector('#room_number');
   var capacitySelect = document.querySelector('#capacity');
-  var noticeElements = document.querySelectorAll('.notice fieldset');
 
-  var addDisabledNotice = function () {
-    noticeElements.forEach(function (elem) {
-      elem.setAttribute('disabled', 'disabled');
-    });
+  var addDisabledNotice = function (inactive) {
+    var noticeElements = document.querySelectorAll('.notice fieldset');
+    for (var i = 0; i < noticeElements.length; i++) {
+      if (inactive) {
+        noticeElements[i].setAttribute('disabled', 'disabled');
+      } else {
+        noticeElements[i].removeAttribute('disabled', 'disabled');
+      }
+    }
   };
-  addDisabledNotice();
-  var removeDisabledNotice = function () {
-    noticeElements.forEach(function (elem) {
-      elem.removeAttribute('disabled', 'disabled');
-    });
-  };
+
+  addDisabledNotice(true);
+
   var setAttributes = function (elem, attrs) {
     for (var key in attrs) {
       if (attrs.hasOwnProperty(key)) {
@@ -98,9 +99,8 @@
   });
 
   window.form = {
-    addDisabledNotice: addDisabledNotice,
-    activateForm: activateForm,
-    removeDisabledNotice: removeDisabledNotice
+    addDisabledNotice : addDisabledNotice,
+    activateForm : activateForm
   };
 
 }) ();

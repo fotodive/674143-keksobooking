@@ -1,8 +1,9 @@
 'use strict';
 
-(function () {
+( function () {
   var HALF_WIDTH_PIN = 25;
   var HEIGHT_PIN = 70;
+  
   var renderPins = function (item) {
     var pinTemplate = document.querySelector('#pin').content.querySelector('.map__pin');
     var mapPin = pinTemplate.cloneNode(true);
